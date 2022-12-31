@@ -1,3 +1,8 @@
+:root {
+    --footer-display: block;
+    --p-footer-display: none;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -8,15 +13,28 @@ body {
     margin: 0;
 }
 
+p.footer {
+    display: var(--p-footer-display);
+}
+
+footer {
+    display: var(--footer-display);
+}
+
 .content {
     background-color:blanchedalmond;   
     height: 200px;
 }
 
 @media screen and (min-width: 720px) {
+    :root {
+        --footer-display: none;
+        --p-footer-display: block;
+    }
     body {
         flex-direction: row;
     }
+
     .content {
         width: 600px;
         height: 100vh;
