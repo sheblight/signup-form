@@ -1,9 +1,15 @@
+@font-face {
+    font-family: "Norse";
+    src: url("fonts/Norse-Bold.otf");
+}
+
 :root {
     --footer-display: block;
     --p-footer-display: none;
     --content-padding: 40px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 
 body {
     display: flex;
@@ -17,15 +23,48 @@ body {
     margin: 0;
 }
 
+header {
+    position: relative;
+}
+
+img {
+    width: 80px;
+}
+
+div.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.507);
+    padding: 20px 0;
+    color: white;
+    font-size: 80px;
+    font-family: "Norse", sans-serif;
+    margin: 5vh 0;
+}
+
 p.footer {
+    position: absolute;
+    bottom: 10px;
     display: var(--p-footer-display);
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+a {
+    color: white;
 }
 
 footer {
     display: var(--footer-display);
+    text-align: center;
+    color: white;
+    margin: 20px 0 10px;
 }
 
 .content {
+    box-sizing: border-box;
     padding: var(--content-padding);
     background-color:rgb(245, 242, 239);
 }
@@ -102,10 +141,14 @@ button {
     }
 
     header {
-        flex-basis: 400px;
+        flex-basis: 500px;
         flex-shrink: 0;
         background-image: url("images/site-bg.jpg");
         background-size: cover;
+    }
+
+    div.banner {
+        margin: 20vh 0;
     }
 
     .content {
