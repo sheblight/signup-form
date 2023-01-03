@@ -52,7 +52,7 @@ p.footer {
     color: white;
 }
 
-a {
+.footer > a {
     color: white;
 }
 
