@@ -102,15 +102,14 @@ button {
     }
 
     header {
-        flex-grow: 2;
+        flex-basis: 400px;
         flex-shrink: 0;
         background-image: url("images/site-bg.jpg");
         background-size: cover;
     }
 
     .content {
-        flex-grow: 3;
-        flex-shrink: 2;
+        flex-grow: 1;
         width: 600px;
         height: 100vh;
     }
