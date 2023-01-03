@@ -1,6 +1,8 @@
 :root {
     --footer-display: block;
     --p-footer-display: none;
+    --content-padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -15,10 +17,6 @@ body {
     margin: 0;
 }
 
-h1 {
-    font-size: 18px;
-}
-
 p.footer {
     display: var(--p-footer-display);
 }
@@ -28,7 +26,69 @@ footer {
 }
 
 .content {
-    background-color:blanchedalmond;
+    padding: var(--content-padding);
+    background-color:rgb(245, 242, 239);
+}
+
+h1 {
+    font-size: 22px;
+}
+
+h1:last-of-type {
+    padding-bottom: 20px;
+}
+
+
+form {
+    margin: 0 calc(var(--content-padding) * -1);
+    padding: 10px var(--content-padding);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 5px 10px rgb(219, 213, 205);
+}
+
+fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px 60px;
+    border: none;
+    padding: 20px 0;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+label {
+    letter-spacing: 1px;
+    font-size: 11px;
+    font-weight: bold;
+    color:rgb(45, 48, 38);
+    text-transform: uppercase;
+}
+
+fieldset > div {
+    width: 200px;
+}
+
+fieldset > div > input {
+    width: inherit;
+    height: 25px;
+    border: solid 1px rgb(187, 187, 187);
+    border-radius: 5px;
+}
+
+button {
+    color:rgb(245, 242, 239);
+    background-color: rgb(69, 88, 29);
+    box-shadow: 3px 5px 5px rgb(212, 212, 212);
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 30px 0 20px;
 }
 
 @media screen and (min-width: 720px) {
@@ -42,12 +102,15 @@ footer {
     }
 
     header {
-        flex-grow: 1;
+        flex-grow: 2;
+        flex-shrink: 0;
         background-image: url("images/site-bg.jpg");
         background-size: cover;
     }
 
     .content {
+        flex-grow: 3;
+        flex-shrink: 2;
         width: 600px;
         height: 100vh;
     }
